@@ -13,5 +13,5 @@ services:
    ports:
      - "1235:8080"
      depends_on:
-     - devopsdb:
+     - "devopsdb":
    
