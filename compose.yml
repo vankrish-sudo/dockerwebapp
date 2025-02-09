@@ -12,4 +12,6 @@ services:
    image: vankrish/docker:app
    ports:
      - "1235:8080"
+     depends:
+     - devopsdb:
    
