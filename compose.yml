@@ -1,17 +1,15 @@
 ---
 version: "3"
-services:
- devopsdb:
-   container_name: devopsdb
-   image: vankrish/docker:db
-   ports:
-     - "3306:3306"
 
- application:
-   container_name: appcontainer
-   image: vankrish/docker:app
-   ports:
-     - "1235:8080"
-   depends_on:
-     - "devopsdb"
-   
+services:
+  devopsdb:
+    image: vankrish/docker:db
+    ports:
+      - "3306:3306"
+
+  application:
+    image: vankrish/docker:app
+    ports:
+      - "1235:8080"
+    depends_on:
+      - devopsdb
