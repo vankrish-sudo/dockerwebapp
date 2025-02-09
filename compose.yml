@@ -3,14 +3,14 @@ version: "3"
 services:
  devopsdb:
    container_name: devopsdb
-   image: shaikmustafa/ourproject:db
+   image: vankrish/docker:db
    ports:
      - "3306:3306"
 
  application:
    container_name: appcontainer
-   image: shaikmustafa/ourproject:app
+   image: vankrish/docker:app
    ports:
-     - "1234:8080"
+     - "1235:8080"
    depends_on:
      - "devopsdb"
